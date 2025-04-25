@@ -2,52 +2,34 @@
 <html>
   <head>
     <title>Donut Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <style>
-      h1 {
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(50, 50, 50);
-        text-align: center;
-      }
-      
       #banner {
-        width: 100%;
         height: 360px;
+        width: 100%;
         object-fit: cover;
-      }
-
-      h2{
-        font-family: Roboto;
-        font-size: 32px;
-        color: rgb(100, 100, 100);
-        text-align: center;
-        font-weight: normal;
-      }
-
-      .bodytext {
-        font-family: Roboto;
-        color: rgb(80, 80, 80);
-      }
-
-      #container {
-        max-width: 720px;
-        margin: 0 auto;
       }
     </style>
   </head>
   <body>
-    <div id="container">
-      <h1>Donut Careers</h1>
-      <img img id="banner" src="https://32dbb2db-4c45-47b3-835a-568bc1d28be0-00-28ovphoctx3z2.riker.replit.dev/static/donuts58.jpg">
-      <h2>About Donuts</h2>
-      <p class="bodytext">
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">
+        {{company_name}} Careers</h1>
+      <img class="img-fluid" id="banner" src="https://32dbb2db-4c45-47b3-835a-568bc1d28be0-00-28ovphoctx3z2.riker.replit.dev/static/donuts58.jpg">
+      <h2 class="text-center mt-2 mb-4">About Donuts</h2>
+      <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque diam ut ipsum tempus, nec malesuada risus maximus. Aenean quis nisi eu purus volutpat feugiat. Sed sit amet pellentesque eros. Suspendisse potenti. Suspendisse imperdiet id dolor ut mollis. Integer fringilla lobortis gravida. Nullam eleifend feugiat lacus, ultricies ultricies nisl venenatis nec. Phasellus vulputate quis libero vel fringilla. Nunc scelerisque nulla eget odio suscipit commodo.</p>
-      <h2>Open Positions</h2>
-      <p class="bodytext">TODO - Show some donuts here</p>
-      <div style="text-align:center;">
-      <button>Contact Us</button>
-        <p>Copyright 2025, Donut company</p>
+      <h2 class="text-center">Open Positions</h2>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html'%}
+        {% endfor %}
+      </div>
+      <div class="text-center ">
+      <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="mt-4">Copyright 2025, Donut company</p>
       </div>
     </div>
   </body>
