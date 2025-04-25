@@ -24,7 +24,7 @@ JOBS = [
    'id': 4,
     'title': 'Backend Donut',
     'location': 'San Francisco, USA',
-    'salary': '€180,000'
+    'salary': '€200,000'
   }
 ]
 
